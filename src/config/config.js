@@ -41,7 +41,7 @@ module.exports = {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      dbName: process.env.MONGODB_DB_NAME  + (envVars.NODE_ENV === 'test' ? '-test' : ''),
+      dbName: process.env.MONGODB_DB_NAME + (envVars.NODE_ENV === 'test' ? '-test' : ''),
       user: process.env.MONGODB_USER,
       pass: process.env.MONGODB_PASS,
     },
