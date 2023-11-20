@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:5.0.5
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo_vol:/data/db
+      - ./mongo_config_vol:/data/configdb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'admin'
+      MONGO_INITDB_ROOT_PASSWORD: 'OP8LD3ncH1Y='
